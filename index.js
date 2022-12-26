@@ -1,25 +1,19 @@
 const PORT = 8000;
 
-const axios = require("axios");
 const cheerio = require("cheerio");
+const axios = require("axios");
 const express = require("express");
-
 const app = express();
+const path = require('path');
 
-let newvar = [];
-
-const url = "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771";
-
-getData(url).then((res) => {console.log(res)});
-
-async function getData(url) {
-
-  axios(url)
-    .then((response) => {
+app.get("/getbadges", (req, res) => {
+    const profileUrl = req.query.url;
+    axios(profileUrl)
+    .then(async (response) => {
       const html = response.data;
       const $ = cheerio.load(html);
       const badges = [];
-      $(`.profile-badge`, html).each(function () {
+      await $(`.profile-badge`, html).each(function () {
         const title = $(`.ql-subhead-1`, this).text().trim().replace("\n", "");
         const date = $(`.ql-body-2`, this).text().trim().replace("\n", "");
         const url = $(this).find("a").attr("href");
@@ -29,10 +23,12 @@ async function getData(url) {
           url,
         });
       });
-      console.log(badges);
-    //   return badges;
+      res.send(badges);
     })
-    .catch((err) => console.log(err));
-}
+})
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
