@@ -1,5 +1,6 @@
 {
   "name": "qwiklabsprogresstracker",
+  "type": "module",
   "version": "1.0.0",
   "description": "A website that tracks the progress of a participant in a cloud skills boost challenge",
   "main": "index.js",
@@ -13,6 +14,8 @@
     "axios": "^1.2.1",
     "cheerio": "^1.0.0-rc.12",
     "express": "^4.18.2",
-    "nodemon": "^2.0.20"
+    "node-fetch": "^3.3.0",
+    "nodemon": "^2.0.20",
+    "pug": "^3.0.2"
   }
 }

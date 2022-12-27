@@ -1,4 +1,4 @@
-[
+const data = [
   'Essential Google Cloud Infrastructure: Foundation',
   'Essential Google Cloud Infrastructure: Core Services',
   'Logging, Monitoring and Observability in Google Cloud',
@@ -12,3 +12,5 @@
   'Perform Foundational Infrastructure Tasks in Google Cloud',
   'Preparing for Your Associate Cloud Engineer Journey'
 ]
+
+export default data
