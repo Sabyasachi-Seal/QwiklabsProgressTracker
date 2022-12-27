@@ -17,11 +17,7 @@ app.get("/getbadges", (req, res) => {
         const title = $(`.ql-subhead-1`, this).text().trim().replace("\n", "");
         const date = $(`.ql-body-2`, this).text().trim().replace("\n", "");
         const url = $(this).find("a").attr("href");
-        badges.push({
-          title,
-          date,
-          url,
-        });
+        badges.push(title);
       });
       res.send(badges);
     })
