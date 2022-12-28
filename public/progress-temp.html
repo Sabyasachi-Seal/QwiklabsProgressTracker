@@ -92,13 +92,17 @@
     data = [{"title":"Essential Google Cloud Infrastructure: Foundation","date":"Earned Dec 5, 2022 EST","url":"https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2955805"},{"title":"Essential Google Cloud Infrastructure: Core Services","date":"Earned Dec 4, 2022 EST","url":"https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2953159"},{"title":"Logging, Monitoring and Observability in Google Cloud","date":"Earned Dec 4, 2022 EST","url":"https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2952039"},{"title":"Getting Started with Terraform for Google Cloud","date":"Earned Dec 4, 2022 EST","url":"https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2951491"},{"title":"Getting Started with Google Kubernetes Engine","date":"Earned Dec 4, 2022 EST","url":"https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2951312"},{"title":"Elastic Google Cloud Infrastructure: Scaling and Automation","date":"Earned Dec 4, 2022 EST","url":"https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2950916"},{"title":"Google Cloud Fundamentals: Core Infrastructure","date":"Earned Dec 3, 2022 EST","url":"https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2949025"},{"title":"Automating Infrastructure on Google Cloud with Terraform","date":"Earned Dec 3, 2022 EST","url":"https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2945657"},{"title":"Set Up and Configure a Cloud Environment in Google Cloud","date":"Earned Dec 2, 2022 EST","url":"https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2942274"},{"title":"Create and Manage Cloud Resources","date":"Earned Dec 2, 2022 EST","url":"https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2941233"},{"title":"Perform Foundational Infrastructure Tasks in Google Cloud","date":"Earned Nov 30, 2022 EST","url":"https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2926924"},{"title":"Preparing for Your Associate Cloud Engineer Journey","date":"Earned Nov 30, 2022 EST","url":"https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2925251"}]
     data.forEach(element => {
         const li = document.createElement('li');
+        var col = "bg-green-100"
+        if(element.state == "Incomplete"){
+          col = "bg-red-100"
+        }
         li.innerHTML = `<li>
                 <a href="${element.url}" class="block hover:bg-gray-50">
                   <div class="px-4 py-4 sm:px-6">
                     <div class="flex items-center justify-between">
                       <p class="truncate text-sm font-medium text-indigo-600">${element.title}</p>
                       <div class="ml-2 flex flex-shrink-0">
-                        <p class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">Completed</p>
+                        <p class="inline-flex rounded-full ${col} px-2 text-xs font-semibold leading-5 text-green-800">${element.state}</p>
                       </div>
                     </div>
                     <div class="mt-2 sm:flex sm:justify-between">

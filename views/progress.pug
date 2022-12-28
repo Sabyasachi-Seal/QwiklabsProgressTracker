@@ -52,13 +52,17 @@ script.
   console.log(data)
   data.forEach(element => {
   const li = document.createElement('li');
+  var col = "bg-green-100"
+        if(element.state == "Incomplete"){
+          col = "bg-red-100"
+        }
   li.innerHTML = `<li>
-  <a href="${element.url}" class="block hover:bg-gray-50">
+  <a href="${element.url}" target="_blank" class="block hover:bg-gray-50">
   <div class="px-4 py-4 sm:px-6">
   <div class="flex items-center justify-between">
   <p class="truncate text-sm font-medium text-indigo-600">${element.title}</p>
   <div class="ml-2 flex flex-shrink-0">
-  <p class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">Completed</p>
+  <p class="inline-flex rounded-full ${col} px-2 text-xs font-semibold leading-5 text-white-800">${element.state}</p>
   </div>
   </div>
   <div class="mt-2 sm:flex sm:justify-between">

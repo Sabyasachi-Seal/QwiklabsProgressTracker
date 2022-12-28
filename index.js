@@ -24,20 +24,29 @@ app.get("/progress", (req, res) => {
         const title = $(`.ql-subhead-1`, this).text().trim().replace("\n", "");
         const date = $(`.ql-body-2`, this).text().trim().replace("\n", "");
         const url = $(this).find("a").attr("href");
+        const state = "Completed";
         badges.push({
           title,
           date,
-          url
+          url,
+          state
         });
       });
       const completed = [];
-      for await (const badge of badges) {
-        if (data.find(e=>{
-          return e === badge.title
-        })) {
-          completed.push(badge);
+      for await(const d of data){
+        const b = badges.find(obj => obj.title === d);
+        if(b){
+          completed.push(b);
+        }
+        else {
+          const title = d;
+          const date = "Complete Within Deadline"
+          const url = "https://www.google.com/search?q="+d.replace(" ", "+")
+          const state = "Incomplete";
+          completed.push({title, date, url, state})
         }
       }
+      console.log(completed)
       res.render("progress", {data:JSON.stringify(completed)});
     })
     .catch((err) => console.log(err));
