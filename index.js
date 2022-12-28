@@ -51,14 +51,17 @@ app.get("/progress", (req, res) => {
           completed.push({ title, date, url, state });
         }
       }
-      // console.log(completed)
-      res.render("progress", { data: JSON.stringify(completed) });
+      res.render("progress", { data: JSON.stringify(completed), ppic, pname, pjdate });
     })
     .catch((err) => console.log(err));
 });
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public/index.html"));
+});
+
+app.get("/particles.json", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/particles.json"));
 });
 
 app.get("/progress-temp", (req, res) => {
