@@ -1,9 +1,9 @@
-import {load} from 'cheerio';
-import express from 'express';
-import path from 'path';
-import axios from 'axios';
-import data from './config.js';
-import {fileURLToPath} from 'url';
+import { load } from "cheerio";
+import express from "express";
+import path from "path";
+import axios from "axios";
+import data from "./config.js";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -20,34 +20,39 @@ app.get("/progress", (req, res) => {
       const html = response.data;
       const $ = load(html);
       const badges = [];
+      const ppic = $(`.l-mbl`, html).attr("src"); // user profile pic
+      const pname = $(`.ql-headline-1`).text(); // user profile name
+      const pjdate = $(`.ql-body-1`).text(); // user profile joining date
+      console.log(ppic);
+      console.log(pname);
+      console.log(pjdate);
       $(`.profile-badge`, html).each(function () {
-        const title = $(`.ql-subhead-1`, this).text().trim().replace("\n", "");
-        const date = $(`.ql-body-2`, this).text().trim().replace("\n", "");
-        const url = $(this).find("a").attr("href");
-        const state = "Completed";
+        const title = $(`.ql-subhead-1`, this).text().trim().replace("\n", ""); // getting name of badge
+        const date = $(`.ql-body-2`, this).text().trim().replace("\n", ""); // date of completion
+        const url = $(this).find("a").attr("href"); // url of badge
+        const state = "Completed"; // setting state
         badges.push({
           title,
           date,
           url,
-          state
+          state,
         });
       });
       const completed = [];
-      for await(const d of data){
-        const b = badges.find(obj => obj.title === d);
-        if(b){
+      for await (const d of data) {
+        const b = badges.find((obj) => obj.title === d);
+        if (b) {
           completed.push(b);
-        }
-        else {
+        } else {
           const title = d;
-          const date = "Complete Within Deadline"
-          const url = "https://www.google.com/search?q="+d.replace(" ", "+")
+          const date = "Complete Within Deadline";
+          const url = "https://www.google.com/search?q=" + d.replaceAll(" ", "+") + "+cloudskillsboost"
           const state = "Incomplete";
-          completed.push({title, date, url, state})
+          completed.push({ title, date, url, state });
         }
       }
-      console.log(completed)
-      res.render("progress", {data:JSON.stringify(completed)});
+      // console.log(completed)
+      res.render("progress", { data: JSON.stringify(completed) });
     })
     .catch((err) => console.log(err));
 });
