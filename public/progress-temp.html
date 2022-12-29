@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
-    <title>Progress</title>
+    <title id="page-name"></title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js/particles.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/public/style.scss" />
@@ -233,9 +233,9 @@
           state: "Completed",
         },
       ];
-      ppic =
-        "https://lh3.googleusercontent.com/a/AEdFTp4D5QZEqUZIa_K8HsDMZtCCnDR_STe33AaN28ye=s320-c";
+      ppic = "https://lh3.googleusercontent.com/a/AEdFTp4D5QZEqUZIa_K8HsDMZtCCnDR_STe33AaN28ye=s320-c";
       document.getElementById("user-pic").src = ppic;
+      document.getElementById("page-name").src = pname;
       data.forEach((element) => {
         const li = document.createElement("li");
         var col = "bg-green-100";
