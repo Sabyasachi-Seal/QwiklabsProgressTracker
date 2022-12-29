@@ -8,7 +8,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PORT = 8000;
+const PORT = process.env.PORT || PORT;
 const app = express();
 
 app.set("view engine", "pug");
@@ -58,7 +58,7 @@ app.get("/progress", (req, res) => {
 
 app.use(express.static('public'))
 
-app.listen(process.env.PORT || 8000, () => console.log(`Server running on PORT ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
 
 app.get("/", (req, res) => {
   res.sendFile('index.html', {root: path.join(__dirname, 'public')});
