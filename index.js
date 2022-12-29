@@ -61,15 +61,15 @@ app.use(express.static('public'))
 app.listen(process.env.PORT || 8000, () => console.log(`Server running on PORT ${PORT}`));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/index.html"));
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 });
 
 app.get("/particles.json", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/particles.json"));
+  res.sendFile('particles.json', {root: path.join(__dirname, 'public')});
 });
 
 app.get("/progress-temp", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/progress-temp.html"));
+  res.sendFile('progress-temp.html', {root: path.join(__dirname, 'public')});
 });
 
 // module.exports = app;
