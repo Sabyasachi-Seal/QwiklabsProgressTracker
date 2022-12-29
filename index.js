@@ -47,7 +47,7 @@ app.get("/progress", (req, res) => {
         } else {
           const title = d;
           const date = "Complete Within Deadline";
-          const url = "https://www.google.com/search?q=" + d + "Cloud Skills Boost"
+          const url = "https://www.google.com/search?q=" + td + "Cloud Skills Boost"
           const state = "Incomplete";
           completed.push({ title, date, url, state });
         }
