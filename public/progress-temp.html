@@ -1,180 +1,249 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-gray-100">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
     <title>Progress</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js/particles.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/public/style.scss" />
-</head>
-<body class="h-full">
-<div id="particles-js" class="fixed h-full w-full top-0 z-10 bg-black"></div>
-<div class="relative min-h-full z-30">
-    <div class="pb-32">
-      <nav class="">
-        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div class="border-b border-gray-700">
-            <div class="flex h-16 items-center justify-between px-4 sm:px-0">
-              <div class="flex items-center">
-                <div class="flex-shrink-0 text-white">
-                  LOGO
-                </div>
-                <div class="hidden md:block">
-                  <div class="ml-10 flex items-baseline space-x-4">
-                    <a href="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
-                </div>
-                </div>
-              </div>
-              <div class="hidden md:block">
-                <div class="ml-4 flex items-center md:ml-6">
-                  <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                    <span class="sr-only">View notifications</span>
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-                    </svg>
-                  </button>
-  
-                  <div class="relative ml-3">
-                    <div>
-                      <button type="button" class="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                        <span class="sr-only">Open user menu</span>
-                        <img class="h-8 w-8 rounded-full" src="" alt="" id="user-pic">
-                      </button>
+    </style>
+  </head>
+  <body class="h-full">
+    <div
+      id="particles-js"
+      class="fixed h-full w-full top-0 z-10 bg-black"
+    ></div>
+    <div class="relative min-h-full z-30">
+      <div class="pb-32">
+        <nav class="">
+          <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="border-b border-gray-700">
+              <div class="flex h-16 items-center justify-between px-4 sm:px-0">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 text-white">LOGO</div>
+                  <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                      <a
+                        href="/"
+                        class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                        aria-current="page"
+                        >Home</a
+                      >
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="-mr-2 flex md:hidden">
-                
-                <button type="button" class="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
-                  <span class="sr-only">Open main menu</span>
-                 
-                  <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                  </svg>
-                  
-                  <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
+                <div class="hidden md:block">
+                  <div class="ml-4 flex items-center md:ml-6">
+                    <button
+                      type="button"
+                      class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    >
+                      <span class="sr-only">View notifications</span>
+                      <svg
+                        class="h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                        />
+                      </svg>
+                    </button>
+
+                    <div class="relative ml-3">
+                      <div>
+                        <button
+                          type="button"
+                          class="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                          id="user-menu-button"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                        >
+                          <span class="sr-only">Open user menu</span>
+                          <img
+                            class="h-8 w-8 rounded-full"
+                            src=""
+                            alt=""
+                            id="user-pic"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                  <button
+                    type="button"
+                    class="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="sr-only">Open main menu</span>
+
+                    <svg
+                      class="block h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                      />
+                    </svg>
+
+                    <svg
+                      class="hidden h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-  
-        
-        <div class="border-b border-gray-700 md:hidden" id="mobile-menu">
-          <div class="space-y-1 px-2 py-3 sm:px-3">
-            <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
+
+          <div class="border-b border-gray-700 md:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 py-3 sm:px-3">
+              <a
+                href="#"
+                class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                aria-current="page"
+                >Home</a
+              >
+            </div>
+          </div>
+        </nav>
+        <header class="py-10">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold tracking-tight text-white">
+              Progress Tracker
+            </h1>
+          </div>
+        </header>
+      </div>
+
+      <main class="-mt-32">
+        <div class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+          <div class="rounded-lg bg-white px-5 py-6 shadow sm:px-6">
+            <div class="overflow-hidden shadow sm:rounded-md">
+              <ul role="list" class="divide-y divide-gray-200" id="list"></ul>
+            </div>
           </div>
         </div>
-      </nav>
-      <header class="py-10">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 class="text-3xl font-bold tracking-tight text-white">Progress Tracker</h1>
-        </div>
-      </header>
+      </main>
     </div>
-  
-    <main class="-mt-32">
-      <div class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
-        <div class="rounded-lg bg-white px-5 py-6 shadow sm:px-6">
-            <div class="overflow-hidden shadow sm:rounded-md">
-                <ul role="list" class="divide-y divide-gray-200" id="list">
-                 
-                </ul>
-              </div>
-        </div>
-      </div>
-    </main>
-</div>
-<script>
-    data = [
-  {
-    title: 'Essential Google Cloud Infrastructure: Foundation',
-    date: 'Earned Dec  5, 2022 EST',
-    url: 'https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2955805',
-    state: 'Completed'
-  },
-  {
-    title: 'Essential Google Cloud Infrastructure: Core Services',
-    date: 'Earned Dec  4, 2022 EST',
-    url: 'https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2953159',
-    state: 'Completed'
-  },
-  {
-    title: 'Logging, Monitoring and Observability in Google Cloud',
-    date: 'Earned Dec  4, 2022 EST',
-    url: 'https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2952039',
-    state: 'Completed'
-  },
-  {
-    title: 'Getting Started with Terraform for Google Cloud',
-    date: 'Earned Dec  4, 2022 EST',
-    url: 'https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2951491',
-    state: 'Completed'
-  },
-  {
-    title: 'Getting Started with Google Kubernetes Engine',
-    date: 'Earned Dec  4, 2022 EST',
-    url: 'https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2951312',
-    state: 'Completed'
-  },
-  {
-    title: 'Elastic Google Cloud Infrastructure: Scaling and Automation',
-    date: 'Earned Dec  4, 2022 EST',
-    url: 'https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2950916',
-    state: 'Completed'
-  },
-  {
-    title: 'Google Cloud Fundamentals: Core Infrastructure',
-    date: 'Earned Dec  3, 2022 EST',
-    url: 'https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2949025',
-    state: 'Completed'
-  },
-  {
-    title: 'Automating Infrastructure on Google Cloud with Terraform',
-    date: 'Earned Dec  3, 2022 EST',
-    url: 'https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2945657',
-    state: 'Completed'
-  },
-  {
-    title: 'Set Up and Configure a Cloud Environment in Google Cloud',
-    date: 'Earned Dec  2, 2022 EST',
-    url: 'https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2942274',
-    state: 'Completed'
-  },
-  {
-    title: 'Create and Manage Cloud Resources',
-    date: 'Earned Dec  2, 2022 EST',
-    url: 'https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2941233',
-    state: 'Completed'
-  },
-  {
-    title: 'Perform Foundational Infrastructure Tasks in Google Cloud',
-    date: 'Earned Nov 30, 2022 EST',
-    url: 'https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2926924',
-    state: 'Completed'
-  },
-  {
-    title: 'Preparing for Your Associate Cloud Engineer Journey',
-    date: 'Earned Nov 30, 2022 EST',
-    url: 'https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2925251',
-    state: 'Completed'
-  }
-]
-    ppic = "https://lh3.googleusercontent.com/a/AEdFTp4D5QZEqUZIa_K8HsDMZtCCnDR_STe33AaN28ye=s320-c"
-    document.getElementById("user-pic").src = ppic
-    data.forEach(element => {
-        const li = document.createElement('li');
-        var col = "bg-green-100"
-        if(element.state == "Incomplete"){
-          col = "bg-red-100"
+    <script>
+      data = [
+        {
+          title: "Essential Google Cloud Infrastructure: Foundation",
+          date: "Earned Dec  5, 2022 EST",
+          url: "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2955805",
+          state: "Completed",
+        },
+        {
+          title: "Essential Google Cloud Infrastructure: Core Services",
+          date: "Earned Dec  4, 2022 EST",
+          url: "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2953159",
+          state: "Completed",
+        },
+        {
+          title: "Logging, Monitoring and Observability in Google Cloud",
+          date: "Earned Dec  4, 2022 EST",
+          url: "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2952039",
+          state: "Completed",
+        },
+        {
+          title: "Getting Started with Terraform for Google Cloud",
+          date: "Earned Dec  4, 2022 EST",
+          url: "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2951491",
+          state: "Completed",
+        },
+        {
+          title: "Getting Started with Google Kubernetes Engine",
+          date: "Earned Dec  4, 2022 EST",
+          url: "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2951312",
+          state: "Completed",
+        },
+        {
+          title: "Elastic Google Cloud Infrastructure: Scaling and Automation",
+          date: "Earned Dec  4, 2022 EST",
+          url: "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2950916",
+          state: "Completed",
+        },
+        {
+          title: "Google Cloud Fundamentals: Core Infrastructure",
+          date: "Earned Dec  3, 2022 EST",
+          url: "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2949025",
+          state: "Completed",
+        },
+        {
+          title: "Automating Infrastructure on Google Cloud with Terraform",
+          date: "Earned Dec  3, 2022 EST",
+          url: "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2945657",
+          state: "Completed",
+        },
+        {
+          title: "Set Up and Configure a Cloud Environment in Google Cloud",
+          date: "Earned Dec  2, 2022 EST",
+          url: "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2942274",
+          state: "Completed",
+        },
+        {
+          title: "Create and Manage Cloud Resources",
+          date: "Earned Dec  2, 2022 EST",
+          url: "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2941233",
+          state: "Completed",
+        },
+        {
+          title: "Perform Foundational Infrastructure Tasks in Google Cloud",
+          date: "Earned Nov 30, 2022 EST",
+          url: "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2926924",
+          state: "Completed",
+        },
+        {
+          title: "Preparing for Your Associate Cloud Engineer Journey",
+          date: "Earned Nov 30, 2022 EST",
+          url: "https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771/badges/2925251",
+          state: "Completed",
+        },
+      ];
+      ppic =
+        "https://lh3.googleusercontent.com/a/AEdFTp4D5QZEqUZIa_K8HsDMZtCCnDR_STe33AaN28ye=s320-c";
+      document.getElementById("user-pic").src = ppic;
+      data.forEach((element) => {
+        const li = document.createElement("li");
+        var col = "bg-green-100";
+        if (element.state == "Incomplete") {
+          col = "bg-red-100";
         }
         li.innerHTML = `<li>
-                <a href="${element.url}" class="block hover:bg-grey-50">
+                <a href="${element.url}" class="block hover2:bg-black">
                   <div class="px-4 py-4 sm:px-6">
                     <div class="flex items-center justify-between">
                       <p class="truncate text-sm font-medium text-indigo-600">${element.title}</p>
@@ -195,13 +264,13 @@
                   </div>
                 </a>
               </li>`;
-        document.querySelector('#list').appendChild(li);
-    });
-    window.addEventListener('DOMContentLoaded', (event) => {
-      particlesJS.load('particles-js', 'particles.json', function() {
-        console.log('callback - particles.js config loaded');
+        document.querySelector("#list").appendChild(li);
       });
-    })
-</script>
-</body>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        particlesJS.load("particles-js", "particles.json", function () {
+          console.log("callback - particles.js config loaded");
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -4,8 +4,10 @@ head
   meta(http-equiv='X-UA-Compatible', content='IE=edge')
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
   title Progress
+  link(rel='stylesheet" type="text/css" href="/public/style.scss')
   script(src='https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp')
   script(src='https://cdn.jsdelivr.net/npm/particles.js/particles.min.js')
+  
 #particles-js.fixed.h-full.w-full.top-0.z-10.bg-black
 .relative.min-h-full.z-30
   .pb-32
@@ -62,7 +64,7 @@ script.
   tcol = "red"
   }
   li.innerHTML = `<li>
-  <a href="${element.url}" target="_blank" class="block hover:bg-gray-50">
+  <a href="${element.url}" target="_blank" class="block hover:backdrop-blur-[1px]">
   <div class="px-4 py-4 sm:px-6">
   <div class="flex items-center justify-between">
   <p class="truncate text-sm font-medium text-${col}-600">${element.title}</p>
