@@ -56,6 +56,8 @@ app.get("/progress", (req, res) => {
     .catch((err) => console.log(err));
 });
 
+app.use(express.static('public'))
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public/index.html"));
 });
@@ -68,4 +70,4 @@ app.get("/progress-temp", (req, res) => {
   res.sendFile(path.join(__dirname, "public/progress-temp.html"));
 });
 
-app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
+app.listen(process.env.PORT || 8000, () => console.log(`Server running on PORT ${PORT}`));
