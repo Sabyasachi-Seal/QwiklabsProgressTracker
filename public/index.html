@@ -1,70 +1,97 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title></title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>Cloud Skills Boost Progress Tracker | GDSC - TMSL</title>
+    <link
+      rel="icon"
+      href="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/cloud/images/favicons/onecloud/super_cloud.png"
+      type="image/icon type">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js/particles.min.js"></script>
-</head>
-<body class="h-full">
-<div id="particles-js" class="fixed h-full w-full top-0 z-10 bg-black"></div>
-<div class="relative min-h-full z-30">
-    <div class="pb-32">
-      <nav class="">
-        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div class="border-b border-gray-700">
-            <div class="flex h-16 items-center justify-between px-4 sm:px-0">
-              <div class="flex items-center">
-                <div class="flex-shrink-0 text-white">
-                  LOGO
+  </head>
+  <body class="h-full">
+    <div
+      id="particles-js"
+      class="fixed h-full w-full top-0 z-10 bg-black"
+    ></div>
+    <div class="relative min-h-full z-30">
+      <div class="pb-32">
+        <nav class="">
+          <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="border-b border-gray-700">
+              <div class="flex h-16 items-center justify-between px-4 sm:px-0">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 text-white">LOGO</div>
                 </div>
               </div>
-              
+            </div>
+          </div>
+        </nav>
+        <header class="py-10">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h1
+              align="center"
+              class="text-3xl font-bold tracking-tight text-white"
+            >
+              Google Cloud Career Practioner Progress Tracker
+            </h1>
+          </div>
+        </header>
+      </div>
+
+      <main class="grid h-screen place-items-top">
+        <div class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+          <div class="rounded-lg backdrop-blur-[2px] px-5 py-6 shadow sm:px-6">
+            <div class="shadow sm:rounded-lg">
+              <div class="px-4 py-5 text-white sm:p-6">
+                <h3 class="text-lg font-medium leading-6 text-white-900">
+                  Enter Your Profile URL
+                </h3>
+                <div class="mt-2 text-sm text-yellow-500">
+                  <p>Example Format :</p>
+                  <div class="mt-2 text-sm text-blue-500 animate-pulse">
+                    <p>
+                      https://www.cloudskillsboost.google/public_profiles/e3e3af1f-e2c8-48b5-ae19-175dee7b6ef5
+                    </p>
+                  </div>
+                </div>
+
+                <form class="mt-5 sm:flex sm:items-center" action="/progress">
+                  <div class="w-full sm:max-w-xs">
+                    <label for="url" class="sr-only">URL</label>
+                    <input
+                      type="url"
+                      name="url"
+                      id="url"
+                      class="text-black opacity-50 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="animate-bounce mt-3 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                  >
+                    View Progress
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </nav>
-      <header class="py-10">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 align="center" class="text-3xl font-bold tracking-tight text-white">Google Cloud Career Practioner Progress Tracker</h1>
-        </div>
-      </header>
+      </main>
     </div>
-  
-    <main class="grid h-screen place-items-top">
-      <div class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
-        <div class="rounded-lg backdrop-blur-[2px] px-5 py-6 shadow sm:px-6">
-            <div class="shadow sm:rounded-lg">
-                <div class="px-4 py-5 text-white sm:p-6">
-                <h3 class="text-lg font-medium leading-6 text-white-900">Enter Your Profile URL</h3>
-                <div class="mt-2 text-sm text-yellow-500">
-                    <p>Example Format : </p>
-                    <div class="mt-2 text-sm text-blue-500 animate-pulse">
-                      <p>https://www.cloudskillsboost.google/public_profiles/e3e3af1f-e2c8-48b5-ae19-175dee7b6ef5</p>
-                    </div>
-                </div>
-                
-                <form class="mt-5 sm:flex sm:items-center" action="/progress">
-                    <div class="w-full sm:max-w-xs">
-                    <label for="url" class="sr-only">URL</label>
-                    <input type="url" name="url" id="url" class="text-black opacity-50 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
-                    </div>
-                    <button type="submit" class="animate-bounce mt-3 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">View Progress</button>
-                </form>
-                </div>
-            </div>
-        </div>
-      </div>
-    </main>
-</div>
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    particlesJS.load('particles-js', 'particles.json', function() {
-      console.log('callback - particles.js config loaded');
-    });
-  })
-</script>
-</body>
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        particlesJS.load("particles-js", "particles.json", function () {
+          console.log("callback - particles.js config loaded");
+        });
+      });
+    </script>
+  </body>
 </html>
