@@ -58,7 +58,7 @@ app.get("/progress", (req, res) => {
 
 // app.use(express.static('public'))
 
-// app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
 
 app.get("/", (req, res) => {
   res.sendFile('index.html', {root: path.join(__dirname, 'public')});
