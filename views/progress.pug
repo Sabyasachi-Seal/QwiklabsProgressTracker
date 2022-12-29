@@ -45,8 +45,8 @@ head
         h1.text-3xl.font-bold.tracking-tight.text-white Progress Tracker
   main.-mt-32
     .mx-auto.max-w-7xl.px-4.pb-12(class='sm:px-6 lg:px-8')
-      .rounded-lg.bg-white.px-5.py-6.shadow(class='sm:px-6')
-        .overflow-hidden.bg-white.shadow(class='sm:rounded-md')
+      .rounded-lg.px-5.py-6.shadow(class='sm:px-6')
+        .overflow-hidden.shadow(class='sm:rounded-md')
           ul#list.divide-y.divide-gray-200(role='list')
 script.
   data = !{JSON.stringify(data)};
@@ -55,17 +55,17 @@ script.
   document.getElementById("user-pic").src = ppic
   data.forEach(element => {
   const li = document.createElement('li');
-  var col = "bg-green-100"
+  var col = "green"
   if(element.state == "Incomplete"){
-  col = "bg-red-100"
+  col = "red"
   }
   li.innerHTML = `<li>
   <a href="${element.url}" class="block hover:bg-gray-50">
   <div class="px-4 py-4 sm:px-6">
   <div class="flex items-center justify-between">
-  <p class="truncate text-sm font-medium text-indigo-600">${element.title}</p>
+  <p class="truncate text-sm font-medium text-${col}-600">${element.title}</p>
   <div class="ml-2 flex flex-shrink-0">
-  <p class="inline-flex rounded-full ${col} px-2 text-xs font-semibold leading-5 text-green-800">${element.state}</p>
+  <p class="inline-flex rounded-full bg-${col}-100 px-2 text-xs font-semibold leading-5 text-white-800">${element.state}</p>
   </div>
   </div>
   <div class="mt-2 sm:flex sm:justify-between">
