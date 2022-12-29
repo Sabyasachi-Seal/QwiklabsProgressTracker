@@ -28,26 +28,30 @@
       </nav>
       <header class="py-10">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 class="text-3xl font-bold tracking-tight text-white">Progress Tracker</h1>
+          <h1 align="center" class="text-3xl font-bold tracking-tight text-white">Google Cloud Career Practioner Progress Tracker</h1>
         </div>
       </header>
     </div>
   
-    <main class="-mt-32">
+    <main class="grid h-screen place-items-top">
       <div class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
-        <div class="rounded-lg bg-white px-5 py-6 shadow sm:px-6">
-            <div class="bg-white shadow sm:rounded-lg">
-                <div class="px-4 py-5 sm:p-6">
-                <h3 class="text-lg font-medium leading-6 text-gray-900">Enter Your Profile URL</h3>
-                <div class="mt-2 text-sm text-gray-500 line-clamp-4">
-                    <p>Example Format : https://www.cloudskillsboost.google/public_profiles/c99ed356-496c-492a-a2da-8f9f28713771</p>
+        <div class="rounded-lg background-blur-[2px] px-5 py-6 shadow sm:px-6">
+            <div class="shadow sm:rounded-lg">
+                <div class="px-4 py-5 text-white sm:p-6">
+                <h3 class="text-lg font-medium leading-6 text-white-900">Enter Your Profile URL</h3>
+                <div class="mt-2 text-sm text-yellow-500">
+                    <p>Example Format : </p>
+                    <div class="mt-2 text-sm text-blue-500 animate-pulse">
+                      <p>https://www.cloudskillsboost.google/public_profiles/e3e3af1f-e2c8-48b5-ae19-175dee7b6ef5</p>
+                    </div>
                 </div>
+                
                 <form class="mt-5 sm:flex sm:items-center" action="/progress">
                     <div class="w-full sm:max-w-xs">
                     <label for="url" class="sr-only">URL</label>
                     <input type="url" name="url" id="url" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
                     </div>
-                    <button type="submit" class="mt-3 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">View Progress</button>
+                    <button type="submit" class="animate-bounce mt-3 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">View Progress</button>
                 </form>
                 </div>
             </div>
