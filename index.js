@@ -8,7 +8,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const app = express();
 
 app.set("view engine", "pug");
@@ -46,7 +46,7 @@ app.get("/progress", (req, res) => {
         } else {
           const title = d;
           const date = "Complete Within Deadline";
-          const url = "https://www.google.com/search?q=" + d.replaceAll(" ", "+") + "+cloudskillsboost"
+          const url = "https://www.google.com/search?q=" + d.replace(" ", "+") + "+cloudskillsboost"
           const state = "Incomplete";
           completed.push({ title, date, url, state });
         }
@@ -56,16 +56,21 @@ app.get("/progress", (req, res) => {
     .catch((err) => console.log(err));
 });
 
+// app.use(express.static('public'))
+
+app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
+
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/index.html"));
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 });
 
 app.get("/particles.json", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/particles.json"));
+  res.sendFile('particles.json', {root: path.join(__dirname, 'public')});
 });
 
 app.get("/progress-temp", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/progress-temp.html"));
+  res.sendFile('progress-temp.html', {root: path.join(__dirname, 'public')});
 });
 
-app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
+// module.exports = app;
+// export default app;
