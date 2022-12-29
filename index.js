@@ -39,14 +39,15 @@ app.get("/progress", (req, res) => {
         });
       });
       const completed = [];
-      for await (const d of data) {
-        const b = badges.find((obj) => obj.title === d);
+      for await (var d of data) {
+        const td = d.replace("(Optional) ", "").replace("(Optional)", "");
+        const b = badges.find((obj) => obj.title === td);
         if (b) {
           completed.push(b);
         } else {
           const title = d;
           const date = "Complete Within Deadline";
-          const url = "https://www.google.com/search?q=" + d.replace(" ", "+") + "+cloudskillsboost"
+          const url = "https://www.google.com/search?q=" + td + "Cloud Skills Boost"
           const state = "Incomplete";
           completed.push({ title, date, url, state });
         }

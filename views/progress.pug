@@ -3,8 +3,12 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible', content='IE=edge')
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
-  title Progress
+  title#page-name Cloud Skills Boost Progress Tracker | GDSC-TMSL
   link(rel='stylesheet" type="text/css" href="/public/style.scss')
+  link(
+      rel="icon"
+      href="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/cloud/images/favicons/onecloud/super_cloud.png"
+      type="image/icon type")
   script(src='https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp')
   script(src='https://cdn.jsdelivr.net/npm/particles.js/particles.min.js')
   
@@ -54,7 +58,9 @@ script.
   data = !{JSON.stringify(data)};
   data = JSON.parse(data);
   ppic = !{JSON.stringify(ppic)};
+  pname = !{JSON.stringify(pname)};
   document.getElementById("user-pic").src = ppic
+  document.getElementById("page-name").innerHTML = pname + "'s Progress | Cloud Skills Boost"
   data.forEach(element => {
   const li = document.createElement('li');
   var col = "green"
