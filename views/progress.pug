@@ -13,12 +13,12 @@ head
   script(src='https://cdn.jsdelivr.net/npm/particles.js/particles.min.js')
   
 #particles-js.fixed.h-full.w-full.top-0.z-10.bg-black
-.relative.min-h-full.z-30
+.relative.min-h-full
   .pb-32
     nav
       .mx-auto.max-w-7xl(class='sm:px-6 lg:px-8')
         .border-b.border-gray-700
-          .flex.h-16.items-center.justify-between.px-4(class='sm:px-0')
+          .flex.h-16.relative.z-20.items-center.justify-between.px-4(class='sm:px-0')
             .flex.items-center
               .flex-shrink-0.text-white#welcome
                 | Welcome, Participant
@@ -27,10 +27,6 @@ head
                   a.bg-gray-900.text-white.px-3.py-2.rounded-md.text-sm.font-medium(href='/') Home
             .hidden(class='md:block')
               .ml-4.flex.items-center(class='md:ml-6')
-                //- button.rounded-full.bg-gray-800.p-1.text-gray-400(type='button', class='hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800')
-                //-   span.sr-only View notifications
-                //-   svg.h-6.w-6(xmlns='http://www.w3.org/2000/svg', fill='none', viewbox='0 0 24 24', stroke-width='1.5', stroke='currentColor', aria-hidden='true')
-                //-     path(stroke-linecap='round', stroke-linejoin='round', d='M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0')
                 .relative.ml-3
                   div
                     button#user-menu-button.flex.max-w-xs.items-center.rounded-full.bg-gray-800.text-sm(type='button', class='focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800', aria-expanded='false', aria-haspopup='true')
@@ -38,20 +34,14 @@ head
                       img#user-pic.h-8.w-8.rounded-full(src='', alt='')
             .-mr-2.flex(class='md:hidden')
               img#mobile-pic.h-8.w-8.rounded-full(src='', alt='')
-              //- button.inline-flex.items-center.justify-center.rounded-md.bg-gray-800.p-2.text-gray-400(type='button', class='hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800', aria-controls='mobile-menu', aria-expanded='false')
-                span.sr-only Open main menu
-                svg.block.h-6.w-6(xmlns='http://www.w3.org/2000/svg', fill='none', viewbox='0 0 24 24', stroke-width='1.5', stroke='currentColor', aria-hidden='true')
-                  path(stroke-linecap='round', stroke-linejoin='round', d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5')
-                svg.hidden.h-6.w-6(xmlns='http://www.w3.org/2000/svg', fill='none', viewbox='0 0 24 24', stroke-width='1.5', stroke='currentColor', aria-hidden='true')
-                  path(stroke-linecap='round', stroke-linejoin='round', d='M6 18L18 6M6 6l12 12')
       #mobile-menu.border-b.border-gray-700(class='md:hidden')
         .space-y-1.px-2.py-3(class='sm:px-3')
           a.bg-gray-900.text-white.block.px-3.py-2.rounded-md.text-base.font-medium(href='/') Home
     header.py-10
       .mx-auto.max-w-7xl.px-4(class='sm:px-6 lg:px-8')
-        h1.text-3xl.font-bold.tracking-tight.text-white#progress Progress Tracker
+        h1.relative.z-20.text-3xl.font-bold.tracking-tight.text-white#progress Progress Tracker
   main.-mt-32.pb-10.px-2
-    .mx-auto.max-w-7xl.px-4.pb-12(class='sm:px-6 lg:px-8 rounded-xl shadow-[-1px_0px_30px_10px_rgba(255,255,255,0.2)] backdrop-blur-[2px] bg-transparent')
+    .mx-auto.max-w-7xl.px-4.pb-12(class='relative z-20 sm:px-6 lg:px-8 rounded-xl shadow-[-1px_0px_30px_10px_rgba(255,255,255,0.2)] backdrop-blur-[2px] bg-transparent')
       .rounded-lg.px-5.py-6.shadow(class='sm:px-6')
         .overflow-hidden.shadow(class='sm:rounded-md')
           ul#list.divide-y.divide-gray-200(role='list')
