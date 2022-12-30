@@ -28,7 +28,7 @@ app.get("/progress", (req, res) => {
       console.log(pdate);
       $(`.profile-badge`, html).each(function () {
         const title = $(`.ql-subhead-1`, this).text().trim().replace("\n", ""); // getting name of badge
-        const date = $(`.ql-body-2`, this).text().trim().replace("\n", ""); // date of completion
+        const date = $(`.ql-body-2`, this).text().trim().replace("\n", "").replace("Earned", ""); // date of completion
         const url = $(this).find("a").attr("href"); // url of badge
         const state = "Completed"; // setting state
         badges.push({
@@ -46,7 +46,8 @@ app.get("/progress", (req, res) => {
           completed.push(b);
         } else {
           const title = d;
-          const date = "Complete Within Deadline";
+          var date = "Complete Within Deadline";
+          if(d.includes("(Optional)") || d.includes("(Optional) ")) date = "You May Or May Not Complete"
           const url = "https://www.google.com/search?q=" + td + "Cloud Skills Boost"
           const state = "Incomplete";
           completed.push({ title, date, url, state });
