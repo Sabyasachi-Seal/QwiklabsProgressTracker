@@ -20,10 +20,10 @@ app.get("/progress", (req, res) => {
       const html = response.data;
       const $ = load(html);
       const badges = [];
-      const ppic = $(`.l-mbl`, html).attr("src"); // user profile pic
+      var ppic = $(`.l-mbl`, html).attr("src"); // user profile pic
       const pname = $(`.ql-headline-1`).text(); // user profile name
       const pdate = $(`.ql-body-1`).text(); // user profile joining date
-      console.log(ppic);
+      if(!ppic) ppic = "https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/cloud/images/favicons/onecloud/super_cloud.png"
       console.log(pname);
       console.log(pdate);
       $(`.profile-badge`, html).each(function () {
