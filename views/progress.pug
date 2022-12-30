@@ -12,19 +12,19 @@ head
   script(src='https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp')
   script(src='https://cdn.jsdelivr.net/npm/particles.js/particles.min.js')
   
-#particles-js.fixed.h-full.w-full.top-0.z-10.bg-black
+#particles-js.fixed.h-full.w-full.top-0.z-10.bg-white
 .relative.min-h-full
   .pb-32
     nav
       .mx-auto.max-w-7xl(class='sm:px-6 lg:px-8')
-        .border-b.border-gray-700
+        .border-gray-700
           .flex.h-16.relative.z-20.items-center.justify-between.px-4(class='sm:px-0')
             .flex.items-center
-              .flex-shrink-0.text-white#welcome
+              .flex-shrink-0.text-black#welcome
                 | Welcome, Participant
               .hidden(class='md:block')
                 .ml-10.flex.items-baseline.space-x-4
-                  a.bg-gray-900.text-white.px-3.py-2.rounded-md.text-sm.font-medium(href='/') Home
+                  a.bg-orange-900.text-white.px-3.py-2.rounded-md.text-sm.font-medium(href='/') Home
             .hidden(class='md:block')
               .ml-4.flex.items-center(class='md:ml-6')
                 .relative.ml-3
@@ -36,12 +36,12 @@ head
               img#mobile-pic.h-8.w-8.rounded-full(src='', alt='')
       #mobile-menu.border-b.border-gray-700(class='md:hidden')
         .space-y-1.px-2.py-3(class='sm:px-3')
-          a.bg-gray-900.text-white.block.px-3.py-2.rounded-md.text-base.font-medium(href='/') Home
+          a.border-orange-700.bg-orange-900.text-white.block.px-3.py-2.rounded-md.text-base.font-medium(href='/') Home
     header.py-10
       .mx-auto.max-w-7xl.px-4(class='sm:px-6 lg:px-8')
-        h1.relative.z-20.text-3xl.font-bold.tracking-tight.text-white#progress Progress Tracker
+        h1.relative.z-20.text-3xl.font-bold.tracking-tight.text-black#progress Progress Tracker
   main.-mt-32.pb-10.px-2
-    .mx-auto.max-w-7xl.px-4.pb-12(class='relative z-20 sm:px-6 lg:px-8 rounded-xl shadow-[-1px_0px_30px_10px_rgba(255,255,255,0.2)] backdrop-blur-[2px] bg-transparent')
+    .mx-auto.max-w-7xl.px-4.pb-12(class='relative z-20 sm:px-6 lg:px-8 rounded-xl shadow-[-1px_0px_30px_10px_rgba(0,0,0,0.2)] backdrop-blur-[2px] bg-transparent')
       .rounded-lg.px-5.py-6.shadow(class='sm:px-6')
         .overflow-hidden.shadow(class='sm:rounded-md')
           ul#list.divide-y.divide-gray-200(role='list')
@@ -73,7 +73,7 @@ script.
   <p class="inline-flex rounded-full bg-${col}-600 px-4 text-xs font-semibold leading-7 text-black-800">${element.state}</p>
   </div>
   </div>
-  <div class="mt-2 text-white sm:flex sm:justify-between">
+  <div class="mt-2 text-black sm:flex sm:justify-between">
   <div class="mt-2 flex items-center text-sm text-${tcol}-500 sm:mt-0">
   <svg class="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fill-rule="evenodd" d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z" clip-rule="evenodd" />
