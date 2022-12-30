@@ -22,10 +22,10 @@ app.get("/progress", (req, res) => {
       const badges = [];
       const ppic = $(`.l-mbl`, html).attr("src"); // user profile pic
       const pname = $(`.ql-headline-1`).text(); // user profile name
-      const pjdate = $(`.ql-body-1`).text(); // user profile joining date
+      const pdate = $(`.ql-body-1`).text(); // user profile joining date
       console.log(ppic);
       console.log(pname);
-      console.log(pjdate);
+      console.log(pdate);
       $(`.profile-badge`, html).each(function () {
         const title = $(`.ql-subhead-1`, this).text().trim().replace("\n", ""); // getting name of badge
         const date = $(`.ql-body-2`, this).text().trim().replace("\n", ""); // date of completion
@@ -52,7 +52,7 @@ app.get("/progress", (req, res) => {
           completed.push({ title, date, url, state });
         }
       }
-      res.render("progress", { data: JSON.stringify(completed), ppic, pname, pjdate });
+      res.render("progress", { data: JSON.stringify(completed), ppic, pname, pdate });
     })
     .catch((err) => console.log(err));
 });
