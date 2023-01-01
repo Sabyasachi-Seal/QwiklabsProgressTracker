@@ -40,6 +40,8 @@ head
     header.py-10
       .mx-auto.max-w-7xl.px-4(class='sm:px-6 lg:px-8')
         h1.relative.z-20.text-3xl.font-bold.tracking-tight.text-white#progress Progress Tracker
+        .w-full.bg-gray-200.rounded-full.mt-5(class='dark:bg-gray-700')
+          .bg-blue-600.text-xs.font-medium.text-blue-100.text-center.leading-none.rounded-full.animate-pulse.transition-all.font-semibold.py-2(class='p-0.5', style='width: 20%')#progress-bar ...
   main.-mt-32.pb-10.px-2
     .mx-auto.max-w-7xl.px-4.pb-12(class='relative z-20 sm:px-6 lg:px-8 rounded-xl shadow-[-1px_0px_30px_10px_rgba(255,255,255,0.2)] backdrop-blur-[2px] bg-transparent')
       .rounded-lg.px-5.py-6.shadow(class='sm:px-6')
@@ -69,6 +71,7 @@ head
         br
         |  All Rights Reserved.
 script.
+  let progress = 0;
   data = !{JSON.stringify(data)};
   data = JSON.parse(data);
   ppic = !{JSON.stringify(ppic)};
@@ -84,6 +87,7 @@ script.
   var col = "green"
   var tcol = "white"
   if(element.state == "Incomplete"){
+  progress = progress + 1
   col = "red"
   tcol = "red"
   }
@@ -111,6 +115,14 @@ script.
   </li>`;
   document.querySelector('#list').appendChild(li);
   });
+  setTimeout(() => {
+    document.getElementById("progress-bar").innerText = data.length - progress + "/" + data.length + "-" + (data.length - progress) / data.length * 100 + "%"
+    document.getElementById("progress-bar").style.width = (data.length - progress) / data.length * 100 + "%";
+  },1000)
+  const googleCorlors = ["#3e7bf4", "#26b643", "#ebb105", "#e33729"]
+  setInterval(() => {
+    document.getElementById("progress-bar").style.backgroundColor = googleCorlors[Math.floor(Math.random() * googleCorlors.length)]
+  }, 1000)
   window.addEventListener('DOMContentLoaded', (event) => {
       particlesJS.load('particles-js', 'particles.json', function() {
         console.log('callback - particles.js config loaded');

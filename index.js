@@ -71,9 +71,5 @@ app.get("/particles.json", (req, res) => {
   res.sendFile('particles.json', {root: path.join(__dirname, 'public')});
 });
 
-app.get("/progress-temp", (req, res) => {
-  res.sendFile('progress-temp.html', {root: path.join(__dirname, 'public')});
-});
-
 // module.exports = app;
 // export default app;
