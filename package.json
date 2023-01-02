@@ -1,5 +1,5 @@
 {
-  "name": "qwiklabsprogresstracker",
+  "name": "csbprogress", 
   "type": "module",
   "version": "1.0.0",
   "description": "A website that tracks the progress of a participant in a cloud skills boost challenge",
