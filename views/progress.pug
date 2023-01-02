@@ -6,19 +6,20 @@ head
   title#page-name Cloud Skills Boost Progress Tracker | GDSC-TMSL
   link(rel='stylesheet" type="text/css" href="/public/style.scss')
   link(
-      rel="icon"
-      href="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/cloud/images/favicons/onecloud/super_cloud.png"
-      type="image/icon type")
+    rel="icon"
+    href="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/cloud/images/favicons/onecloud/super_cloud.png"
+    type="image/icon type")
   script(src='https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp')
   script(src='https://cdn.jsdelivr.net/npm/particles.js/particles.min.js')
-  
-#particles-js.fixed.h-full.w-full.top-0.bg-black
+
+body(onselectstart='return false')
+#particles-js.fixed.h-full.w-full.top-0.bg-black(class="z-[1]")
 .relative.min-h-full
   .pb-32
     nav
       .mx-auto.max-w-7xl(class='sm:px-6 lg:px-8')
         .border-b.border-gray-700
-          .flex.h-16.relative.z-20.items-center.justify-between.px-4(class='sm:px-0')
+          .flex.h-16.relative.items-center.justify-between.px-4(class='sm:px-0 z-[2]')
             .flex.items-center
               .flex-shrink-0.text-white#welcome
                 | Welcome, Participant
@@ -39,11 +40,11 @@ head
           a.bg-gray-900.text-white.block.px-3.py-2.rounded-md.text-base.font-medium(href='/') Home
     header.py-10
       .mx-auto.max-w-7xl.px-4(class='sm:px-6 lg:px-8')
-        h1.relative.z-20.text-3xl.font-bold.tracking-tight.text-white#progress Progress Tracker
+        h1.relative.text-3xl.font-bold.tracking-tight.text-white#progress(class='z-[2]') Progress Tracker
         .w-full.bg-gray-200.rounded-full.mt-5(class='dark:bg-gray-700')
-          .bg-blue-600.text-xs.font-medium.text-blue-100.text-center.leading-none.rounded-full.animate-pulse.transition-all.font-semibold.py-2(class='p-0.5', style='width: 20%')#progress-bar ...
+          .bg-blue-600.text-xs.font-medium.text-blue-100.text-center.leading-none.rounded-full.animate-pulse.transition-all.font-semibold.py-2(class='p-0.5 relative z-[2]', style='width: 20%')#progress-bar ...
   main.-mt-32.pb-10.px-2
-    .mx-auto.max-w-7xl.px-4.pb-12(class='relative z-20 sm:px-6 lg:px-8 rounded-xl shadow-[-1px_0px_30px_10px_rgba(255,255,255,0.2)] backdrop-blur-[2px] bg-transparent')
+    .mx-auto.max-w-7xl.px-4.pb-12(class='relative z-[2] sm:px-6 lg:px-8 rounded-xl shadow-[-1px_0px_30px_10px_rgba(255,255,255,0.2)] backdrop-blur-[2px] bg-transparent')
       .rounded-lg.px-5.py-6.shadow(class='sm:px-6')
         .overflow-hidden.shadow(class='sm:rounded-md')
           ul#list.divide-y.divide-gray-200(role='list')
@@ -71,7 +72,8 @@ head
         br
         |  All Rights Reserved.
 script.
-  let progress = 0;
+  let incomp = 0;
+  var optional = 0;
   data = !{JSON.stringify(data)};
   data = JSON.parse(data);
   ppic = !{JSON.stringify(ppic)};
@@ -87,7 +89,8 @@ script.
   var col = "green"
   var tcol = "white"
   if(element.state == "Incomplete"){
-  progress = progress + 1
+  if(element.title.includes("(Optional)") || element.title.includes("(Optional) ")) optional = optional + 1;
+  incomp = incomp + 1
   col = "red"
   tcol = "red"
   }
@@ -116,15 +119,15 @@ script.
   document.querySelector('#list').appendChild(li);
   });
   setTimeout(() => {
-    document.getElementById("progress-bar").innerText = data.length - progress + "/" + data.length + "-" + (data.length - progress) / data.length * 100 + "%"
-    document.getElementById("progress-bar").style.width = (data.length - progress) / data.length * 100 + "%";
+    document.getElementById("progress-bar").innerText = data.length - (incomp-optional) + "/" + (data.length-optional) + '(' + optional + ' Optional)' + " : " + (data.length - incomp + optional) / (data.length - optional) * 100 + "%"
+    document.getElementById("progress-bar").style.width = Math.min((data.length - incomp + optional) / (data.length - optional) * 100, 100) + "%";
   },1000)
-  const googleCorlors = ["#3e7bf4", "#26b643", "#ebb105", "#e33729"]
+  const gcol = ["#3e7bf4", "#26b643", "#ebb105", "#e33729"]
   setInterval(() => {
-    document.getElementById("progress-bar").style.backgroundColor = googleCorlors[Math.floor(Math.random() * googleCorlors.length)]
+    document.getElementById("progress-bar").style.backgroundColor = gcol[Math.floor(Math.random() * gcol.length)]
   }, 1000)
   window.addEventListener('DOMContentLoaded', (event) => {
-      particlesJS.load('particles-js', 'particles.json', function() {
-        console.log('callback - particles.js config loaded');
-      });
+    particlesJS.load('particles-js', 'particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
     })
