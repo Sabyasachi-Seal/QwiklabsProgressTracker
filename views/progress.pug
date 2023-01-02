@@ -119,13 +119,15 @@ script.
   document.querySelector('#list').appendChild(li);
   });
   setTimeout(() => {
-    document.getElementById("progress-bar").innerText = data.length - (incomp-optional) + "/" + (data.length-optional) + '(' + optional + ' Optional)' + " : " + (data.length - incomp + optional) / (data.length - optional) * 100 + "%"
+    document.getElementById("progress-bar").innerText = data.length - (incomp-optional) + "/" + (data.length-optional) + ' (' + optional + ' Optional)' + " : " + (data.length - incomp + optional) / (data.length - optional) * 100 + "%"
     document.getElementById("progress-bar").style.width = Math.min((data.length - incomp + optional) / (data.length - optional) * 100, 100) + "%";
   },1000)
   const gcol = ["#3e7bf4", "#26b643", "#ebb105", "#e33729"]
+  var i = 0;
   setInterval(() => {
-    document.getElementById("progress-bar").style.backgroundColor = gcol[Math.floor(Math.random() * gcol.length)]
-  }, 1000)
+    document.getElementById("progress-bar").style.backgroundColor = gcol[(i%gcol.length)]
+    i = i +1; 
+  }, 1500)
   window.addEventListener('DOMContentLoaded', (event) => {
     particlesJS.load('particles-js', 'particles.json', function() {
       console.log('callback - particles.js config loaded');
