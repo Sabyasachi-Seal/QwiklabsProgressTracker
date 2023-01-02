@@ -6,9 +6,9 @@ head
   title#page-name Cloud Skills Boost Progress Tracker | GDSC-TMSL
   link(rel='stylesheet" type="text/css" href="/public/style.scss')
   link(
-      rel="icon"
-      href="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/cloud/images/favicons/onecloud/super_cloud.png"
-      type="image/icon type")
+    rel="icon"
+    href="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/cloud/images/favicons/onecloud/super_cloud.png"
+    type="image/icon type")
   script(src='https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp')
   script(src='https://cdn.jsdelivr.net/npm/particles.js/particles.min.js')
 body.h-full(onselectstart='return false')
@@ -69,6 +69,8 @@ body.h-full(onselectstart='return false')
         |  All Rights Reserved.
 
 script.
+  let incomp = 0;
+  var optional = 0;
   data = !{JSON.stringify(data)};
   data = JSON.parse(data);
   ppic = !{JSON.stringify(ppic)};
@@ -84,6 +86,8 @@ script.
   var col = "green"
   var tcol = "white"
   if(element.state == "Incomplete"){
+  if(element.title.includes("(Optional)") || element.title.includes("(Optional) ")) optional = optional + 1;
+  incomp = incomp + 1
   col = "red"
   tcol = "red"
   }
@@ -96,7 +100,7 @@ script.
   <p class="inline-flex rounded-full bg-${col}-600 px-4 text-xs font-semibold leading-7 text-black-800">${element.state}</p>
   </div>
   </div>
-  <div class="mt-2 text-black sm:flex sm:justify-between">
+  <div class="mt-2 text-white sm:flex sm:justify-between">
   <div class="mt-2 flex items-center text-sm text-${tcol}-500 sm:mt-0">
   <svg class="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fill-rule="evenodd" d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z" clip-rule="evenodd" />
@@ -111,8 +115,18 @@ script.
   </li>`;
   document.querySelector('#list').appendChild(li);
   });
+  setTimeout(() => {
+    document.getElementById("progress-bar").innerText = data.length - (incomp-optional) + "/" + (data.length-optional) + ' (' + optional + ' Optional)' + " : " + (data.length - incomp + optional) / (data.length - optional) * 100 + "%"
+    document.getElementById("progress-bar").style.width = Math.min((data.length - incomp + optional) / (data.length - optional) * 100, 100) + "%";
+  },1000)
+  const gcol = ["#3e7bf4", "#26b643", "#ebb105", "#e33729"]
+  var i = 0;
+  setInterval(() => {
+    document.getElementById("progress-bar").style.backgroundColor = gcol[(i%gcol.length)]
+    i = i +1; 
+  }, 1500)
   window.addEventListener('DOMContentLoaded', (event) => {
-      particlesJS.load('particles-js', 'particles.json', function() {
-        console.log('callback - particles.js config loaded');
-      });
+    particlesJS.load('particles-js', 'particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
     })
