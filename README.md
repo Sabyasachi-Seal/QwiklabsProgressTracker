@@ -8,9 +8,9 @@ My solution is a Cloud Skills Boost Progress Tracker that tracks how much a part
 
 # Screenshots: -
 
-![image](https://user-images.githubusercontent.com/36451386/211213793-6005e289-4dbe-4e39-a34e-650bc70e4523.png)
-![image](https://user-images.githubusercontent.com/36451386/211213777-00aac0cb-dbe7-4ffd-8572-fe9ed6f882f4.png)
-![image](https://user-images.githubusercontent.com/36451386/211213785-a06443a2-a195-442b-8e0e-6bb2775d740a.png)
+<img align=center width=100% src="https://user-images.githubusercontent.com/36451386/211213793-6005e289-4dbe-4e39-a34e-650bc70e4523.png">
+<img align=left width=48% src="https://user-images.githubusercontent.com/36451386/211213777-00aac0cb-dbe7-4ffd-8572-fe9ed6f882f4.png">
+<img align=right width=48% src="https://user-images.githubusercontent.com/36451386/211213785-a06443a2-a195-442b-8e0e-6bb2775d740a.png">
 
 # Services Used:
 
