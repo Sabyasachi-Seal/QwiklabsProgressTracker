@@ -16,6 +16,6 @@
    <li>Cloud Storage Buckets (Used with Cloud Build)</li>
    <li>Artifact Registry (Maintaining the Containers running the web app)</li>
 </ol>
-<h3 id="github-link-httpsgithubcomsabyasachi-sealcloudskillsboostprogresstracker">GitHub Link: <a href="https://github.com/Sabyasachi-Seal/QwiklabsProgressTracker">Sabyasachi-Seal/CloudSkillsBoostProgressTracker</a></h3>
-<h3 id="gcp-deployed-link-httpscloudskillsboostprogresstracker-j44zd2vilq-ucarunapp">GCP Deployed Link: <a href="https://cloudskillsboostprogresstracker-j44zd2vilq-uc.a.run.app/">https://cloudskillsboostprogresstracker-j44zd2vilq-uc.a.run.app/</a></h3>
+<h3 id="github-link-httpsgithubcomsabyasachi-sealcloudskillsboostprogresstracker">GitHub Link: <a href="https://github.com/Sabyasachi-Seal/QwiklabsProgressTracker">Sabyasachi-Seal/QwiklabsProgressTracker</a></h3>
+<h3 id="gcp-deployed-link-httpscloudskillsboostprogresstracker-j44zd2vilq-ucarunapp">GCP Deployed Link: <a href="[https://cloudskillsboostprogresstracker-j44zd2vilq-uc.a.run.app/]([https://qwiklabsprogresstracker-zdhdelpk4a-uc.a.run.app/](https://qwiklabsprogresstracker-zdhdelpk4a-uc.a.run.app/))">https://cloudskillsboostprogresstracker-j44zd2vilq-uc.a.run.app/</a></h3>
 <h3 id="alternative-link-deployed-on-render--20-sec-spin-up-time-httpsqwiklabsprogresstrackeronrendercom">Alternative Link (Deployed on Render – 20 Sec Spin up time): <a href="https://qwiklabsprogresstracker.onrender.com/">https://qwiklabsprogresstracker.onrender.com/</a></h3>
