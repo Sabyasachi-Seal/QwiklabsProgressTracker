@@ -1,7 +1,29 @@
-<h1 id="problem-statement">Problem Statement:</h1>
-<p>Often times students’ complete courses and labs on the Cloud Skills Boost Platform but they have a hard time tracking the number of labs they completed and how many and which ones they need to do. There is also a problem that arises when new labs are added or some labs are removed from an ongoing pathway. We need a method to remove the dependency of the progress from an excel sheet and make the whole process a lot more accessible. The solution should be such that the product made can be used in any of the future upcoming events revolving around cloud skills boost challenges.</p>
-<h1 id="solution">Solution:</h1>
-<p>My solution is a Cloud Skills Boost Progress Tracker that tracks how much a participant has finished in a certain set of challenges and labs with as least of a delay as possible. This is achieved through using a config that stores all the required labs and optional labs in a pathway and a challenge and then scrapes the public profile of a user to match the number of pathways that person has completed. Since this depends on the badges present in the link of the user’s profile, the latency is almost zero. Thus, dependency from any excel sheet is removed. Also, a user doesn’t get to see another user’s profile, so data confidentiality is maintained. A simple change in the config.js will also change the labs and tracks that the user’s badges are matched against.</p>
+Elevate Your Meeting Experience with an Attendance Tracker that Transforms Collaboration!
+
+Introducing our cutting-edge Attendance Tracker, a game-changing solution that revolutionizes how you track and maintain meeting attendance. With seamless integration with Google Drive Spreadsheet, this powerful tool automates attendance tracking, streamlines collaboration, and ensures efficient meeting management.
+
+Gone are the days of manually recording attendance and struggling to keep track of attendees. Our Attendance Tracker harnesses the power of automation and real-time data synchronization, empowering you to effortlessly monitor and maintain attendance records with utmost precision.
+
+Key Features and Benefits:
+1. Automated Attendance Marking: Say goodbye to manual attendance taking. Our innovative tracker automatically records meeting attendees, eliminating the need for time-consuming manual input. Save valuable time and reduce administrative burdens.
+
+2. Real-time Data Synchronization: Seamlessly sync attendance data with Google Drive Spreadsheet, ensuring real-time updates and access to attendance records from anywhere, anytime. Enjoy the flexibility of cloud-based collaboration and eliminate version control issues.
+
+3. Customizable Attendance Reports: Generate comprehensive attendance reports with a click of a button. Customize reports based on your requirements, including participant names, meeting dates, and additional details. Gain valuable insights and simplify record-keeping.
+
+4. Efficient Meeting Management: Streamline meeting processes by focusing on productive discussions rather than attendance tracking. Our tracker enables you to effortlessly monitor participation, identify trends, and ensure that all relevant stakeholders are engaged.
+
+Use Cases:
+1. Team Collaboration: Seamlessly track attendance in team meetings, ensuring accountability, and fostering a culture of active participation. Effortlessly generate attendance reports to assess team engagement and identify areas for improvement.
+
+2. Client Meetings: Impress clients with seamless and automated attendance tracking. Maintain accurate records, demonstrate professionalism, and strengthen client relationships by ensuring every attendee feels valued and accounted for.
+
+3. Training Sessions and Workshops: Simplify attendance management for training sessions and workshops. Focus on delivering impactful content while our Attendance Tracker automatically captures attendee information, simplifying post-event reporting and analysis.
+
+4. Educational Institutions: Streamline attendance management in classrooms, lectures, and workshops. Improve efficiency, enhance accuracy, and effortlessly generate attendance reports for academic record-keeping and student performance evaluation.
+
+Unlock the power of our Attendance Tracker and experience the future of seamless collaboration and meeting management. Don't miss out on the opportunity to elevate your meeting experience, enhance productivity, and drive success. Embrace the Attendance Tracker today!
+
 <h1 id="screenshots--">Screenshots: -</h1>
 <p><img align=center width=100% src="https://user-images.githubusercontent.com/36451386/211213793-6005e289-4dbe-4e39-a34e-650bc70e4523.png" alt=""> 
    <img align=left width=47% src="https://user-images.githubusercontent.com/36451386/211213777-00aac0cb-dbe7-4ffd-8572-fe9ed6f882f4.png" alt=""> 
