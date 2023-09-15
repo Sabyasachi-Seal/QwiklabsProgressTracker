@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible', content='IE=edge')
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
-  title#page-name Cloud Skills Boost Progress Tracker | GDSC-TMSL
+  title#page-name Cloud Skills Boost Progress Tracker | GDSC
   link(rel='stylesheet" type="text/css" href="/public/style.scss')
   link(
     rel="icon"
@@ -121,7 +121,7 @@ script.
   var diff = incomp - optional
   if(diff < 0) diff = 0;
   setTimeout(() => {
-    document.getElementById("progress-bar").innerText = (total - incomp) + "/" + (total - optional) + ' (' + optional + ' Optional)' + " : " + (total - incomp) / (total - optional) * 100 + "%"
+    document.getElementById("progress-bar").innerText = (total - incomp) + "/" + (total - optional) + ' (' + optional + ' Optional)' + " : " + (((total - incomp) / (total - optional)).toFixed(2) )* 100 + "%"
     document.getElementById("progress-bar").style.width = Math.min(Math.max((total - incomp) / (total- optional), 0.1) * 100, 100) + "%";
   },1000)
   const gcol = ["#3e7bf4", "#26b643", "#ebb105", "#e33729"]
