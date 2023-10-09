@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/142f787c-d2a9-42cf-a1c7-31c2025cacbd/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/gcp-progress-tracker",
+    "appService.deploySubpath": "."
+}
