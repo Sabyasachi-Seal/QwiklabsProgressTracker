@@ -2,6 +2,8 @@ name: docker_build_push_acr
  
 on:
   workflow_dispatch:
+  push:
+    branches: ['main']
  
 jobs:
   docker_build_push_acr:
