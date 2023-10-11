@@ -1,5 +1,5 @@
 const data = [
-  "Level 3: GenAI",
+  "Level 3: GenAI (or) Level 3 GenAI: Prompt Engineering",
   "Google Cloud Computing Foundations: Cloud Computing Fundamentals",
   "Create and Manage Cloud Resources",
   "Google Cloud Computing Foundations: Infrastructure in Google Cloud",

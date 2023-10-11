@@ -21,7 +21,7 @@ app.get("/progress", (req, res) => {
       const html = response.data;
       const $ = load(html);
       const badges = [];
-      var ppic = $(`.l-mbl`, html).attr("src"); // user profile pic
+      let ppic = $(`.l-mbl`, html).attr("src"); // user profile pic
       const pname = $(`.ql-headline-1`).text(); // user profile name
       const pdate = $(`.ql-body-1`).text(); // user profile joining date
       if(!ppic) ppic = "https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/cloud/images/favicons/onecloud/super_cloud.png"
@@ -40,14 +40,26 @@ app.get("/progress", (req, res) => {
         });
       });
       const completed = [];
-      for await (var d of data) {
+
+      for await (let d of data) {
+
         const td = d.replace("(Optional) ", "").replace("(Optional)", "");
-        const b = badges.find((obj) => obj.title === td);
-        if (b) {
-          completed.push(b);
-        } else {
+
+        let b;
+        let flag = false;
+
+        for (b of badges) {
+          if (td.indexOf(b.title) != -1) {
+            completed.push(b);
+            flag = true;
+            break;
+          }
+        }
+
+        if (!flag)
+        {
           const title = d;
-          var date = "Complete Within Deadline";
+          let date = "Complete Within Deadline";
           if(d.includes("(Optional)") || d.includes("(Optional) ")) date = "You May Or May Not Complete"
           const url = "https://www.google.com/search?q=" + td + "Cloud Skills Boost"
           const state = "Incomplete";
@@ -59,12 +71,11 @@ app.get("/progress", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-// app.use(express.static('public'))
 app.use(express.static(__dirname+'/public'));
 
 app.listen(PORT, HOST);
 
-console.log(`Server running on PORT ${PORT}`)
+console.log(`Server running on ${HOST}:${PORT}`)
 
 app.get("/", (req, res) => {
   res.sendFile('index.html', {root: path.join(__dirname, 'public')});
@@ -77,6 +88,3 @@ app.get("/particles.json", (req, res) => {
 app.get("/progress-temp", (req, res) => {
   res.sendFile('progress-temp.html', {root: path.join(__dirname, 'public')});
 });
-
-// module.exports = app;
-// export default app;
